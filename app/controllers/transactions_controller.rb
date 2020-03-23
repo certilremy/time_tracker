@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
   before_action :require_user
 
   def index
-    @transactions = current_user.transactions
+    @transactions = current_user.transactions.order(created_at: :desc)
   end
 
   def new
