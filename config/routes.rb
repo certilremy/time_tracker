@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 root 'pages#home'
 get "/signup", to: "users#new"
+get "/signin", to: "sessions#new"
+post "/signin", to: "sessions#create"
 resources :users, only: %i[create show]
 resources :transactions, only: %i[new create show index]
 resources :groups, only: %i[new create show index]
