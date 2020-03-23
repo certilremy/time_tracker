@@ -1,3 +1,7 @@
+<% if logged_in? %>
+<%= link_to  "Log out", logout_path %>
+<% end %>
+
 <h1><%=@user.username%></h1>
 
 

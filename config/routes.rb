@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 root 'pages#home'
 get "/signup", to: "users#new"
 get "/signin", to: "sessions#new"
+get "/logout", to: "sessions#logout", as: 'logout'
 post "/signin", to: "sessions#create"
 resources :users, only: %i[create show]
 resources :transactions, only: %i[new create show index]
