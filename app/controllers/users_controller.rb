@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_user, only: %i[show]
   def new
     @user = User.new
   end
@@ -20,6 +21,6 @@ class UsersController < ApplicationController
   private
 
   def param_user
-    params.require(:user).permit(:username , :avatar)
+    params.require(:user).permit(:username, :avatar)
   end
 end

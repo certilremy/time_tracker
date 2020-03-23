@@ -1,6 +1,8 @@
 class TransactionsController < ApplicationController
+  before_action :require_user
+
   def index
-    @transactions = Transaction.all
+    @transactions = current_user.transactions
   end
 
   def new
