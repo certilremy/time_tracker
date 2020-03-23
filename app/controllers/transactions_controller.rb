@@ -7,11 +7,12 @@ class TransactionsController < ApplicationController
 
   def new
     @transaction = Transaction.new
+    @groups = Group.all
   end
 
   def create
     @transaction = Transaction.new(param_transaction)
-    # @transaction.user_id = User.last
+    @transaction.user_id = current_user.id
     if @transaction.save
       redirect_to @transaction
     else
@@ -26,6 +27,6 @@ class TransactionsController < ApplicationController
   private
 
   def param_transaction
-    params.require(:transaction).permit(:name, :amoun, :user_id)
+    params.require(:transaction).permit(:name, :amoun, :user_id, :group_id)
   end
 end
