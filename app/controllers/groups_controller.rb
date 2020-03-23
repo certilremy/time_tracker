@@ -1,4 +1,8 @@
 class GroupsController < ApplicationController
+  def index
+    @groups = Group.all
+  end
+
   def new
     @group = Group.new
   end
@@ -10,6 +14,10 @@ class GroupsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def show
+    @group = Group.find(params[:id])
   end
 
   private
