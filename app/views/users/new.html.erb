@@ -1,4 +1,6 @@
 <%= form_for @user do |f| %>
+<%= f.label :avatar, "Add a profile pic" %>
+<%= f.file_field :avatar %>
 <%= f.label :username, "usename" %>
 <%= f.text_field :username %>
 <%= f.submit "Sign up"%>
