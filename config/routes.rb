@@ -4,4 +4,5 @@ root 'pages#home'
 get "/signup", to: "users#new"
 resources :users, only: %i[create show]
 resources :transactions, only: %i[new create show index]
+
 end
