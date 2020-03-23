@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_23_164947) do
+ActiveRecord::Schema.define(version: 2020_03_23_174116) do
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+    t.integer "amoun"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
