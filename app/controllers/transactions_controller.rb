@@ -5,12 +5,16 @@ class TransactionsController < ApplicationController
 
   def create
     @transaction = Transaction.new(param_transaction)
-    #@transaction.user_id = User.last
+    # @transaction.user_id = User.last
     if @transaction.save
       redirect_to @transaction
     else
       render 'new'
     end
+  end
+
+  def show
+    @transaction = Transaction.find(params[:id])
   end
 
   private
