@@ -1,0 +1,7 @@
+<h1>All transaction</h1>
+
+<% @transactions.each do |t| %>
+<%= t.name%> <br>
+<%end%>
+
+<%= link_to  "Add new", new_transaction_path %>
