@@ -1,0 +1,8 @@
+example_id                             | status  | run_time        |
+-------------------------------------- | ------- | --------------- |
+./spec/models/group_spec.rb[1:1]       | pending | 0.00001 seconds |
+./spec/models/transaction_spec.rb[1:1] | pending | 0.00001 seconds |
+./spec/models/user_spec.rb[1:1:1]      | passed  | 0.01022 seconds |
+./spec/models/user_spec.rb[1:1:2]      | passed  | 0.01229 seconds |
+./spec/models/user_spec.rb[1:2:1]      | passed  | 0.00554 seconds |
+./spec/models/user_spec.rb[1:2:2]      | passed  | 0.01414 seconds |
