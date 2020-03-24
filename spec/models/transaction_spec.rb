@@ -6,7 +6,7 @@ RSpec.describe Transaction, type: :model do
     it { should validate_length_of(:name).is_at_most(30) }
     it { should validate_presence_of(:amoun) }
   end
-  describe 'associations to test' do
+  describe 'associations' do
     it { should belong_to(:user) }
     it { should belong_to(:group) }
   end
