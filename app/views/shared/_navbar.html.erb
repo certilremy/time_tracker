@@ -1,9 +1,5 @@
 <nav>
-  <ul>
-    <% if logged_in? %>
-      <li> <%= link_to  "Logout", logout_path %></li>
-    <% else %>
-      <li> <%= link_to  "Sign-in", signin_path %></li>
-    <% end %>
-  </ul>
+   <div class="logo">
+    <i class="fas fa-bars activate"></i> <h4>Timetracker</h4>
+  </div>
 </nav>
