@@ -1,7 +1,12 @@
-<section class = "side-bar">
+<section class= "side-bar">
+   <div class="logo">
+    <i class="fas fa-bars activate"></i> <a href="/"> <h4>Timetracker</h4></a>
+  </div>
 <ul class="sidebar-menu">
-<li class = "sidebar-items"> <%= link_to  "All Groups", groups_path %></li>
-<li class = "sidebar-items"> <%= link_to  "All Times", transactions_path %></li>
-<li class = "sidebar-items"> <%= link_to  "All External times", transactions_path %></li>
+<li class = "sidebar-items"><i class="fas fa-building activate"></i> <%= link_to  "All Groups", groups_path %></li>
+<li class = "sidebar-items"><i class="fas fa-business-time activate"></i><%= link_to  "All Times", transactions_path %></li>
+<li class = "sidebar-items"> <i class="fas fa-school activate"></i><%= link_to  "All External times", transactions_path %></li>
 </ul>
 </section>
+
+
