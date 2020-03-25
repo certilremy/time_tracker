@@ -4,16 +4,13 @@
       <h4>Timetracker</h4>
     </a>
   </div>
-
   <div class="user-info">
-   <% if @current_user.avatar.attached? %>
-  <%= image_tag @user.avatar, class:"profile-picture" %>
-
-  <%else%>
-  <img class= "profile-picture" src="./img/avatar.png" alt="">
-<% end %>
-
-<h3 class="name"><%=current_user.username%></h3>
+    <% if @current_user.avatar.attached? %>
+      <%= image_tag @user.avatar, class:"profile-picture" %>
+    <%else%>
+      <img class= "profile-picture" src="./img/avatar.png" alt="">
+    <% end %>
+    <h3 class="name"><%=current_user.username%></h3>
   </div>
   <ul class="sidebar-menu">
     <div class = "sidebar-items" >

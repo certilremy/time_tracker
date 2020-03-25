@@ -8,7 +8,9 @@
 
 .container {
   display: flex;
-  height: 600px;
+  height: 650px;
+  width: 100%;
+  background-color: #fafafa;
 }
 .logo {
   display: flex;
@@ -17,7 +19,7 @@
 }
 
 .logo h4 {
-  color: white;
+  color: #cad1df;
   margin-left: 30px;
   font-family: "", cursive;
   font-size: 30px;
@@ -30,14 +32,16 @@
   text-decoration: none;
 }
 .main {
-  width: 70%;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 .side-bar {
   height: 100%;
   width: 250px;
-  background-color: #3778c2;
-  margin-right: 10px;
+  background: rgb(19,49,94);
+  background: linear-gradient(90deg, rgba(19,49,94,1) 0%, rgba(55,120,194,1) 100%);
   font-family: 'Noto Sans', sans-serif;
 }
 .user-info {
@@ -51,7 +55,7 @@
 }
 
 .name {
-    color: #FFFFFF;
+    color: #cad1df;
 }
 .sidebar-menu {
   padding-top: 60px;
@@ -65,23 +69,36 @@
 .sidebar-items li {
   padding-top: 10px;
   margin-left: 20px;
-  border-bottom: 1px solit white;
+  border-bottom: 1px solit #cad1df;
   list-style: none;
 }
 
 .sidebar-items li a {
   text-decoration: none;
-  color: white;
+  color: #cad1df;
 }
 
 .sidebar-items .icons-a {
-  color: white;
-  border: 1px solid white;
+  color: #cad1df;
+  border: 1px solid #cad1df;
   border-radius: 50%;
   padding: 10px 10px 10px 10px;
 }
 
 hr {
   width: 150px;
-  color: white;
+  color: #cad1df;
 }
+
+.section-head {
+    margin-top: 0px;
+    box-shadow: 0 8px 6px -6px #d8d7d7;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+

@@ -1,7 +1,14 @@
 <%= render  "shared/side_bar" %>
-<div class="main">
-  <h1>All groups</h1>
+<section class="main">
+<div class="section-head">
+    <h1>ALL GROUPS</h1>
+
+    <div class="action-buton">
+    <%= link_to  "ADD NEW GROUP", new_group_path %>
+    </div>   
+</div>
+  
   <%@groups.each do |g|%>
     <%= g.name%> <br>
   <%end%>
-</div>
+</section>
