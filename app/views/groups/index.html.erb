@@ -9,6 +9,7 @@
   <ul class="list-group">
    <%@groups.each do |g|%>
     <li>
+    <a href="/groups/<%=g.id%>">
     <% if g.icon.attached? %>
       <img class= "data-icon" src="<%=url_for(g.icon)%>" alt="group icon">
       <%else%>
@@ -23,6 +24,7 @@
           <p>You have <%=g.transactions.count%> Time to this group</p>
         <% end %>      
       </div>
+      </a>
     </li>
     <%end%>
   </div>

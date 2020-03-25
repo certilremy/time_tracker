@@ -125,17 +125,23 @@ hr {
     margin: 50px;
     display: flex;
     flex-direction: column;
-
+}
+.list-group li{
+    list-style: none;
 }
 
-.list-group li {
+.list-group li a {
  display: flex;
  align-items: center;
- list-style: none;
  margin-bottom: 5px;
  background-color: white;
  font-family: 'Noto Sans', sans-serif;
  color: #434b54;
+ text-decoration: none;
+}
+
+.group-content {
+    margin-left: 10px;
 }
 
 
