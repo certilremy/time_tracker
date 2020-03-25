@@ -1,27 +1,44 @@
 <section class= "side-bar">
   <div class="logo">
-    <a href="/"> 
+    <a href="/">
       <h4>Timetracker</h4>
     </a>
   </div>
+
+  <div class="user-info">
+   <% if @current_user.avatar.attached? %>
+  <%= image_tag @user.avatar, class:"profile-picture" %>
+
+  <%else%>
+  <img class= "profile-picture" src="./img/avatar.png" alt="">
+<% end %>
+
+<h3 class="name"><%=current_user.username%></h3>
+  </div>
   <ul class="sidebar-menu">
     <div class = "sidebar-items" >
-      <i class="fas fa-building icons-a"></i>
-      <li ><%= link_to  "All Groups", groups_path %> </li>
-    </div>
-
-    <div class = "sidebar-items" >
-      <i class="fas fa-clock icons-a"></i>
-      <li ><%= link_to  "All Times", transactions_path %></li>
+      <a href="/groups/">
+        <i class="fas fa-building icons-a"></i>
+      </a>
+      <li ><%= link_to  "All Groups", groups_path %> <hr> </li>
     </div>
     <div class = "sidebar-items" >
-      <i class="fas fa-external-link-alt icons-a"></i>
-      <li ><%= link_to  "All External times", transactions_path %></li>
+      <a href="/transactions/">
+        <i class="fas fa-clock icons-a"></i>
+      </a>
+      <li ><%= link_to  "All Times", transactions_path %> <hr></li>
     </div>
-
-        <div class = "sidebar-items" >
-      <i class="fas fa-sign-out-alt icons-a"></i>
-      <li ><%= link_to  "Log out", logout_path %></li>
+    <div class = "sidebar-items" >
+      <a href="#">
+        <i class="fas fa-external-link-alt icons-a"></i>
+      </a>
+      <li ><%= link_to  "All External times", transactions_path %> <hr></li>
+    </div>
+    <div class = "sidebar-items" >
+      <a href="/logout/">
+        <i class="fas fa-sign-out-alt icons-a"></i>
+      </a>
+      <li ><%= link_to  "Log out", logout_path %> </li>
     </div>
   </ul>
 </section>
