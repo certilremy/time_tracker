@@ -99,6 +99,44 @@ hr {
     align-items: center;
     font-family: 'Noto Sans', sans-serif;
 }
+.section-head h1 {
+    color: #434b54;
+}
+.action-button {
+    text-decoration: none;
+    background-color: #5fb523;
+    padding: 20px 20px 20px 20px;
+    color: white;
+}
+
+.action-btn {
+    border-style: dotted;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+
+ .data-icon {
+    width: 100px;
+    margin: 10px;
+}
+
+.list-group {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.list-group li {
+ display: flex;
+ align-items: center;
+ list-style: none;
+ margin-bottom: 5px;
+ background-color: white;
+ font-family: 'Noto Sans', sans-serif;
+ color: #434b54;
+}
 
 
 

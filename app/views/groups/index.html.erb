@@ -1,14 +1,29 @@
 <%= render  "shared/side_bar" %>
-<section class="main">
-<div class="section-head">
+<div class="main">
+  <div class="section-head">
     <h1>ALL GROUPS</h1>
-
-    <div class="action-buton">
-    <%= link_to  "ADD NEW GROUP", new_group_path %>
-    </div>   
-</div>
-  
-  <%@groups.each do |g|%>
-    <%= g.name%> <br>
-  <%end%>
-</section>
+    <div class="action-button">
+      <%= link_to  "ADD NEW GROUP", new_group_path, class: "action-btn" %>
+    </div>
+  </div>
+  <ul class="list-group">
+   <%@groups.each do |g|%>
+    <li>
+    <% if g.icon.attached? %>
+      <img class= "data-icon" src="<%=url_for(g.icon)%>" alt="group icon">
+      <%else%>
+      <img class= "data-icon" src="./img/group-icon.png" alt="group icon">
+    <% end %>
+      
+      <div class="group-content">
+        <h3><%=g.name%></h3>
+        <% if g.transactions.count == 0 %>
+          <p>No time in this group yet</p>
+          <%else%>
+          <p>You have <%=g.transactions.count%> Time to this group</p>
+        <% end %>      
+      </div>
+    </li>
+    <%end%>
+  </div>
+</ul>
