@@ -7,8 +7,11 @@
     </div>
   </div>
   <ul class="list-time">
-      <h3><%=@group.transactions.sum(:amoun)%> hours spent in this group</h3> <%= link_to 'Export to excel ', group_path(@group.id, format: :xlsx) %>
+  <div class = "group-data-action">
+  <h3><%=@group.transactions.sum(:amoun)%> hours spent in this group</h3> <%= link_to 'Export to excel ', group_path(@group.id, format: :xlsx), class: "export-btn" %>
+  </div>
       
+
     <% if @group.transactions.count == 0 %>
       <p>No time on this group yet</p>
     <%else%>

@@ -381,3 +381,16 @@ footer ul li {
 footer ul li a {
   color: #85898f;
 }
+
+.group-data-action {
+  display: flex;
+  align-items: center;
+}
+
+.group-data-action .export-btn{
+  margin-left: auto;
+  background-color: #3574bd;
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px 10px 10px;
+}
