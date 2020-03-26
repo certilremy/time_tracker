@@ -123,21 +123,27 @@ hr {
 }
 
 .list-group {
-    margin: 0px 50px  0px  50px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.list-group h3 {
+.list-time {
+    margin: 20px 50px  0px  50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-time h3 {
     color: #434b54;
     font-family: 'Noto Sans', sans-serif;
     font-size: 23px;
 }
-.list-group li{
+.list-group li, .list-time li{
     list-style: none;
 }
 
-.list-group li a {
+.list-group li a , .list-time li a{
  display: flex;
  align-items: center;
  margin-bottom: 5px;
@@ -170,5 +176,28 @@ hr {
     font-weight: 200;
 }
 
+form {
+    margin: 50px 50px 50px 50px;
+   display: flex;
+   flex-direction: column;
+}
 
+.form-data {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+
+.submit-btn {
+    border: 3px solid white;
+    border-style: dotted;
+    background-color: #5fb523;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    align-self: center;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 700;
+}
 

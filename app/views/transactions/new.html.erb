@@ -1,11 +1,28 @@
-<%= form_for @transaction do |f| %>
-<%= f.label :name, "Time to track name" %>
-<%= f.text_field :name %> <br>
-<%= f.label :amoun, "Amount of time spent" %>
-<%= f.number_field :amoun %> <br>
-<%= f.label :group_id, "Assing it to a group" %>
-<%= f.collection_select :group_id, @groups, :id, :name %> <br>
-<%= f.submit "Add time"%>
-<% end %>
-
 <%= render  "shared/side_bar" %>
+<div class="main">
+  <div class="section-head">
+    <h1>NEW TIME</h1>
+    <div class="action-button">
+      <%= link_to  "CANCEL", root_path, class: "action-btn" %>
+    </div>
+  </div>
+  <%= form_for @transaction do |f| %>
+    <div class="form-data">
+      <%= f.label :name, "Time to track name" %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="form-data">
+      <%= f.label :amoun, "Amount of time spent" %>
+      <%= f.number_field :amoun %>
+    </div>
+    <div class="form-data">
+      <%= f.label :group_id, "Assing it to a group" %>
+      <%= f.collection_select :group_id, Group.all, :id, :name %>
+    </div>
+     <div class="action-button">
+     <%= f.submit "Add time", class:"submit-btn"%>
+    </div>
+    
+  <% end %>
+</div>

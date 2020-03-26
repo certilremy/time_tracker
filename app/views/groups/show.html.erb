@@ -6,7 +6,7 @@
       <%= link_to  "ADD NEW TIME", new_transaction_path, class: "action-btn" %>
     </div>
   </div>
-  <ul class="list-group">
+  <ul class="list-time">
     <h3>Time in this group</h3>
     <% if @group.transactions.count == 0 %>
       <p>No time on this group yet</p>
