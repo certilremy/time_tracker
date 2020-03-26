@@ -101,6 +101,7 @@ hr {
 }
 .section-head h1 {
     color: #434b54;
+    text-transform: uppercase;
 }
 .action-button {
     text-decoration: none;
@@ -122,9 +123,15 @@ hr {
 }
 
 .list-group {
-    margin: 50px;
+    margin: 0px 50px  0px  50px;
     display: flex;
     flex-direction: column;
+}
+
+.list-group h3 {
+    color: #434b54;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 23px;
 }
 .list-group li{
     list-style: none;
@@ -142,6 +149,25 @@ hr {
 
 .group-content {
     margin-left: 10px;
+}
+
+.time-content {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.time-content .time-detail {
+    display: flex;
+    align-items: center;
+}
+
+.time-detail p{
+    margin-left: 100px;
+    font-weight: 700;
+}
+
+.time-content #time {
+    font-weight: 200;
 }
 
 
