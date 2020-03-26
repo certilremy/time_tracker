@@ -171,6 +171,7 @@ hr {
 
 .group-content {
   margin-left: 10px;
+  width: 100%;
 }
 
 .time-content {
@@ -181,6 +182,7 @@ hr {
 .time-content .time-detail {
   display: flex;
   align-items: center;
+  line-height: 10px;
 }
 
 .time-detail p {

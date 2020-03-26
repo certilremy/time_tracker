@@ -7,29 +7,22 @@
     </div>
   </div>
   <ul class="list-group">
-   <%@groups.each do |g|%>
-    <li>
-    <a href="/groups/<%=g.id%>">
-    <% if g.icon.attached? %>
-      <img class= "data-icon" src="<%=url_for(g.icon)%>" alt="group icon">
-      <%else%>
-      <img class= "data-icon" src="./img/group-icon.png" alt="group icon">
-    <% end %>
-      
-      <div class="group-content">
-        <h3><%=g.name%></h3>
-        <% if g.transactions.count == 0 %>
-          <p>No time in this group yet</p>
+    <%@groups.each do |g|%>
+      <li>
+        <a href="/groups/<%=g.id%>">
+          <% if g.icon.attached? %>
+            <img class= "data-icon" src="<%=url_for(g.icon)%>" alt="group icon">
           <%else%>
-          <p>You have <%=g.transactions.count%> Time to this group</p>
-        <% end %>      
-      </div>
-      </a>
-    </li>
+            <img class= "data-icon" src="./img/group-icon.png" alt="group icon">
+          <% end %>
+          <div class="group-content">
+            <h3><%=g.name%></h3>
+            <p>Added <%=g.created_at.strftime("%B/%d/%y")%></p>
+          </div>
+        </a>
+      </li>
     <%end%>
     <%= will_paginate @groups %>
   </div>
-  
 </ul>
-
 </div>

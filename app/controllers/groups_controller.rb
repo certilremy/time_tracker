@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
   before_action :require_user
   def index
-    @groups = Group.all.order(created_at: :desc).paginate(page: params[:page], per_page: 3)
+    @groups = Group.order('name ASC').paginate(page: params[:page], per_page: 3)
   end
 
   def new

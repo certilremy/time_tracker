@@ -26,7 +26,7 @@
                 <h3> <%= g.name%></h3>
                 <p><%=g.amoun%> hours</p>
               </div>
-              <p id = "time">added <%=time_ago_in_words(g.created_at, include_seconds: true)%></p>
+              <p id = "time">Added <%=g.created_at.strftime("%B/%d/%y")%> by <%=g.user.username%></p>
             </div>
           </a>
         </li>
