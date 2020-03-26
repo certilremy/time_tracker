@@ -7,14 +7,14 @@
     </div>
   </div>
   <ul class="list-time">
-    <h3>Time in this group</h3>
+    <h3><%=@transactions.sum(:amoun)%> external hours spent </h3>
     <% if @transactions.count == 0 %>
       <p>No time yet Add the first one</p>
     <%else%>
       <%@transactions.each do |t|%>
         <li>
           <a href="/transactions/<%=t.id%>">
-              <img class= "data-icon" src="/img/na.png" alt="group icon">
+              <img class= "data-icon-na" src="/img/na.png" alt="group icon">
             <div class="time-content">
               <div class= "time-detail">
                 <h3> <%= t.name%></h3>

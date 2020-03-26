@@ -7,7 +7,7 @@
     </div>
   </div>
   <ul class="list-time">
-    <h3>Time in this group</h3>
+    <h3><%=@transactions.sum(:amoun)%> hours spent</h3>
     <% if @transactions.count == 0 %>
       <p>No time yet Add the first one</p>
     <%else%>
