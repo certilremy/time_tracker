@@ -8,6 +8,6 @@ post "/signin", to: "sessions#create"
 get "/externals", to: "transactions#external", as: 'external'
 resources :users, only: %i[create show]
 resources :transactions, only: %i[new create show index]
-resources :groups, only: %i[new create show index]
+resources :groups, only: %i[new create index]
 
 end

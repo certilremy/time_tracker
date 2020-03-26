@@ -6,7 +6,7 @@ class TransactionsController < ApplicationController
   end
 
   def external
-    @transactions = Transaction.where(group: nil)
+    @transactions = current_user.transactions.where(group: nil)
   end
 
   def new
