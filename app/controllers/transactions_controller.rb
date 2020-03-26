@@ -5,6 +5,10 @@ class TransactionsController < ApplicationController
     @transactions = current_user.transactions.order(created_at: :desc)
   end
 
+  def external
+    @transactions = Transaction.where(group: nil)
+  end
+
   def new
     @transaction = Transaction.new
     @groups = Group.all

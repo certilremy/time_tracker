@@ -18,10 +18,10 @@
     </div>
     <div class="form-data">
       <%= f.label :group_id, "Assing it to a group" %>
-      <%= f.collection_select :group_id, Group.all, :id, :name %>
+      <%= f.collection_select :group_id, Group.all, :id, :name , include_blank: 'None' %>
     </div>
      <div class="action-button">
-     <%= f.submit "Add time", class:"submit-btn"%>
+     <%= f.submit "ADD TIME", class:"submit-btn"%>
     </div>
     
   <% end %>
