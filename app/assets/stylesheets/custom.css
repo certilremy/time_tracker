@@ -326,8 +326,25 @@ form {
   margin-right: 20px;
 }
 
+.pagination{
+  padding-top: 20px;
+  margin: auto;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.pagination .previous_page, .pagination .next_page{
+  background-color: #3574bd;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  margin-left: 5px;
+  text-decoration: none;
+  
+}
+
+
 footer ul {
   text-align: center;
+  
 }
 
 footer ul li {
