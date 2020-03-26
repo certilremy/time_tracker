@@ -1,0 +1,7 @@
+workbook = xlsx_package.workbook
+workbook.add_worksheet(name: "#{@group.name} transaction") do |sheet|
+sheet.add_row %w(Name, Amount)
+@group.transactions.each do |hour|
+    sheet.add_row [hour.name, hour.amoun]
+end
+end

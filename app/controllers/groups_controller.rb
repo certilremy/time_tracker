@@ -20,6 +20,10 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   private
