@@ -1,3 +1,31 @@
-<% @transactions.each do |e|%>
-<%=e.name%>
-<%end%>
+<%= render  "shared/side_bar" %>
+<div class="main">
+  <div class="section-head">
+    <h1>EXTERNAL Times</h1>
+    <div class="action-button">
+      <%= link_to  "ADD NEW TIME", new_transaction_path, class: "action-btn" %>
+    </div>
+  </div>
+  <ul class="list-time">
+    <h3>Time in this group</h3>
+    <% if @transactions.count == 0 %>
+      <p>No time yet Add the first one</p>
+    <%else%>
+      <%@transactions.each do |t|%>
+        <li>
+          <a href="/transactions/<%=t.id%>">
+              <img class= "data-icon" src="/img/na.png" alt="group icon">
+            <div class="time-content">
+              <div class= "time-detail">
+                <h3> <%= t.name%></h3>
+                <p><%=t.amoun%> hours</p>
+              </div>
+              <p id = "time">added <%=time_ago_in_words(t.created_at, include_seconds: true)%></p>
+            </div>
+          </a>
+        </li>
+      <%end%>
+    <% end %>
+  </ul>
+</div>
+

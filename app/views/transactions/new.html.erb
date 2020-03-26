@@ -2,13 +2,13 @@
 <div class="main">
   <div class="section-head">
     <h1>NEW TIME</h1>
-    <div class="action-button">
+    <div class="action-button-cancel">
       <%= link_to  "CANCEL", root_path, class: "action-btn" %>
     </div>
   </div>
   <%= form_for @transaction do |f| %>
     <div class="form-data">
-      <%= f.label :name, "Time to track name" %>
+      <%= f.label :name, "Time name" %>
       <%= f.text_field :name %>
     </div>
 
@@ -17,7 +17,7 @@
       <%= f.number_field :amoun %>
     </div>
     <div class="form-data">
-      <%= f.label :group_id, "Assing it to a group" %>
+      <%= f.label :group_id, "Select group" %>
       <%= f.collection_select :group_id, Group.all, :id, :name , include_blank: 'None' %>
     </div>
      <div class="action-button">

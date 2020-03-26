@@ -1,10 +1,22 @@
-<h1>New Group</h1>
-
-<%= form_for @group do |f| %>
-<%= f.label :name, "Name of the group" %>
-<%= f.text_field :name %> <br>
-<%= f.label :icon, "Add an icon to this group" %>
-<%= f.file_field :icon %> <br>
-<%= f.submit "Add group"%>
-<% end %>
 <%= render  "shared/side_bar" %>
+<div class="main">
+  <div class="section-head">
+    <h1>NEW GROUP</h1>
+    <div class="action-button-cancel">
+      <%= link_to  "CANCEL", groups_path, class: "action-btn" %>
+    </div>
+  </div>
+  <%= form_for @group do |f| %>
+    <div class="form-data-file">
+      <%= f.label :icon, "Add an icon to this group" %>
+      <%= f.file_field :icon , class:"custom-file-input"%>
+    </div>
+    <div class="form-data">
+      <%= f.label :name, "Group name" %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="action-button">
+      <%= f.submit "ADD GROUP", class:"submit-btn"%>
+    </div>
+  <% end %>
+</div>

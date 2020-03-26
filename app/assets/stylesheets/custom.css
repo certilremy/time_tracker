@@ -109,6 +109,12 @@ hr {
     padding: 20px 20px 20px 20px;
     color: white;
 }
+.action-button-cancel {
+    text-decoration: none;
+    background-color: #3574bd;
+    padding: 20px 20px 20px 20px;
+    color: white;
+}
 
 .action-btn {
     border-style: dotted;
@@ -189,19 +195,32 @@ form {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.form-data label {
-    margin-bottom: 5px;
-    color: #434b54;
+.form-data-file {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-family: 'Noto Sans', sans-serif;
 }
 
-.form-data input{
+.form-data label, .form-data-file label {
+    margin-bottom: 5px;
+    color: #434b54;
+    margin-left: 2px;
+}
+
+.form-data input {
     border: 0.5px solid #b8b9b9;;
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
+    font-size: 20px;
+    color: #434b54;
+}
+.form-data input[file]{
+    width: 100%;
 }
 
 .form-data select {
-    height: 30px;
+    height: 40px;
 }
 
 
@@ -216,4 +235,3 @@ form {
     font-size: 15px;
     font-weight: 700;
 }
-
