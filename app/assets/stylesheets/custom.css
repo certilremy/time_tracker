@@ -21,7 +21,7 @@
 .logo h4 {
   color: #cad1df;
   margin-left: 30px;
-  font-family: "", cursive;
+  font-family: "Pacifico", cursive;
   font-size: 30px;
   letter-spacing: 2px;
   font-weight: 700;
@@ -245,4 +245,56 @@ form {
   width: 100%;
   font-size: 15px;
   font-weight: 700;
+}
+
+.data-greeting,
+.data-greeting-action {
+  margin: auto;
+  text-align: center;
+  width: 700px;
+}
+
+.data-greeting h1 {
+  margin-top: 200px;
+  font-family: "Pacifico", cursive;
+  color: #434b54;
+  font-size: 60px;
+  line-height: 20px;
+}
+
+.data-greeting p {
+  font-family: "Noto Sans", sans-serif;
+  color: #434b54;
+}
+
+.data-greeting-action {
+  margin-top: 70px;
+}
+
+.data-btn-sign-up {
+  text-decoration: none;
+  background-color: #3574bd;
+  padding: 10px 50px 10px 50px;
+  color: white;
+}
+
+.data-greeting-action p {
+  margin-top: 20px;
+  font-size: 12px;
+  font-family: "Noto Sans", sans-serif;
+  color: #85898f;
+}
+
+.data-greeting-action p a {
+  color: #85898f;
+}
+
+.data-sign-up {
+  margin: auto;
+  width: 700px;
+}
+
+.data-sign-up h1 {
+  align-self: center;
+  font-family: "Noto Sans", sans-serif;;
 }

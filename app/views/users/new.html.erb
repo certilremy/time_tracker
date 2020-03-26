@@ -1,8 +1,19 @@
-<%= form_for @user do |f| %>
-<%= f.label :avatar, "Add a profile pic" %>
-<%= f.file_field :avatar %>
-<%= f.label :username, "usename" %>
-<%= f.text_field :username %>
-<%= f.submit "Sign up"%>
-<% end %>
-<%= render  "shared/side_bar" %>
+<div class="main">
+  <div class="data-sign-up">
+    
+    <%= form_for @user do |f| %>
+    <div class="form-data-file">
+     <h1>Sign-up</h1>
+      <%= f.label :avatar, "Add a profile picture" %>
+      <%= f.file_field :avatar %>
+      </div>
+      <div class="form-data">
+      <%= f.label :username, "usename" %>
+      <%= f.text_field :username %>
+      </div>
+      <div class="action-button">
+      <%= f.submit "Sign up", class:"submit-btn"%>
+      </div>
+    <% end %>
+  </div>
+</div>

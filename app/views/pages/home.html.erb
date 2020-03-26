@@ -1,3 +1,10 @@
-<h1>Welcom to home</h1>
-<p>Please sigin in to start tracking your hours</p>
-<%= link_to  "Sign up", signup_path %>
+<div class="main">
+  <div class="data-greeting">
+    <h1>Timetracker</h1>
+    <p>Never confuse managing your time again!</p>
+  </div>
+  <div class="data-greeting-action">
+    <%= link_to  "SIGN-UP", signup_path , class:"data-btn-sign-up"%>
+    <p>Have an accout? login <%= link_to  "here", signin_path %></p>
+  </div>
+</div>
