@@ -6,6 +6,21 @@
   height: 100%;
 }
 
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #434b54;
+
+}
+
 .container {
   display: flex;
   height: 650px;
@@ -256,6 +271,13 @@ form {
   width: 700px;
 }
 
+.data-about {
+  margin: auto;
+  text-align: center;
+  width: 700px;
+  font-family: "Noto Sans", sans-serif;
+  color: #434b54;
+}
 .data-greeting h1 {
   margin-top: 200px;
   font-family: "Pacifico", cursive;
