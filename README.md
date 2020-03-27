@@ -81,3 +81,13 @@ $ rails start
 ```
 $ bundle exec rspec
 ```
+## Author 
+
+* Certil Remy    Twitter: https://twitter.com/certilremy
+
+## Contribution 
+
+If you want to contribute to this project you're welcome .
+Follow the github code of conduit fork this repot and openl your pull request. 
+
+## Design idea by Gregoire Vella on Behance 
