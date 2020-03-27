@@ -7,6 +7,18 @@
     </div>
   </div>
   <%= form_for @group do |f| %>
+    <% if @group.errors.any? %>
+      <div id="error-container">
+        <div class="alert">
+          <p>Fix the errors below to create your group!</p>
+        </div>
+        <ul>
+          <% @group.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <div class="form-data-file">
       <%= f.label :icon, "Add an icon to this group" %>
       <%= f.file_field :icon , class:"custom-file-input"%>

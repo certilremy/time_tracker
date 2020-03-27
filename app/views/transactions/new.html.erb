@@ -7,11 +7,22 @@
     </div>
   </div>
   <%= form_for @transaction do |f| %>
+    <% if @transaction.errors.any? %>
+      <div id="error-container">
+        <div class="alert">
+          <p>Fix the errors below to add your times!</p>
+        </div>
+        <ul>
+          <% @transaction.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <div class="form-data">
       <%= f.label :name, "Time name" %>
       <%= f.text_field :name %>
     </div>
-
     <div class="form-data">
       <%= f.label :amoun, "Amount of hours spent" %>
       <%= f.number_field :amoun %>
@@ -20,9 +31,8 @@
       <%= f.label :group_id, "Select group" %>
       <%= f.collection_select :group_id, Group.all, :id, :name , include_blank: 'None' %>
     </div>
-     <div class="action-button">
-     <%= f.submit "ADD TIME", class:"submit-btn"%>
+    <div class="action-button">
+      <%= f.submit "ADD TIME", class:"submit-btn"%>
     </div>
-    
   <% end %>
 </div>

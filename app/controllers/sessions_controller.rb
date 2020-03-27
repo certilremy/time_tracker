@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to transactions_path
     else
-      flash[:danger] = 'username not found'
+      flash.now[:danger] = 'Invalid username'
       render 'new'
     end
   end
