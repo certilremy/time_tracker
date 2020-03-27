@@ -13,6 +13,7 @@ test:
 
 production:
   <<: *default
-  database: time_tracker_production
-  username: time_tracker
-  password: <%= ENV['TIME_TRACKER_DATABASE_PASSWORD'] %>
+  database: <%= ENV['POSTGRES_DB'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
