@@ -1,24 +1,83 @@
-# README
+#   Time Tracker
+Timetracker is an application to help you track and group your working time. You can group your time by a business, project or leave them blanks as external time. You can add your own group to group your time. You don't need to spend time calculating your time for a specific group, the app displays the amount of time you spent on each group you worked on.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<p align="center">
+    <img src="capture.png">
+</p>
 
-Things you may want to cover:
+## Live version of the production
+http://timetracker.certilremy.com/
 
-* Ruby version
+### Feature Currently available:
 
-* System dependencies
+* Create time an associate it to a group
+* Create group
+* Display group alphabetically
+* Display external time
+* Display time by most recent
+* Display a single group with time on this group
+* Pagination to list times and groups.
+* Download group times in excel format
 
-* Configuration
 
-* Database creation
+### New features in production :
 
-* Database initialization
+* Set time to private or public
+* Track time automatically with javascrips like T-shit
+* Search for time and group 
+* Download Group time to pdf
+* Cache data with redis db
 
-* How to run the test suite
+## Tech used 
+* Html
+* CSS
+* Ruby on Rails
+* SQLite for developement 
+* postgreSQL  for production
 
-* Services (job queues, cache servers, search engines, etc.)
+## External Gem used 
 
-* Deployment instructions
+* Will paginate (For pagination)
+* PostgreSQL (Gem 'pg') for production database
+* axlsx_rails For Exporting Group data to Excel 
+* Rspec for Unit test 
 
-* ...
+## Using the app in development 
+Clone this repo (you need ruby installed in your computer).
+```
+$ git clone git@github.com:certilremy/time_tracker.git
+```
+
+ Change to the app directory 
+ 
+ ```
+    $ cd time_tracker
+ ```
+
+   And run 
+
+```
+$ bundle install 
+```
+
+Then 
+
+```
+$ rails db:migrate 
+```
+To start the server 
+
+```
+$ rails s
+```
+or 
+
+```
+$ rails start
+```
+
+## Runnin the test 
+
+```
+$ bundle exec rspec
+```
