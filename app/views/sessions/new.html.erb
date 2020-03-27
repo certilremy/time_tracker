@@ -1,0 +1,14 @@
+<div class="main">
+  <div class="data-sign-up">
+    <%= form_for(:session, url: signin_path) do |f| %>
+      <h1>Login</h1>
+      <div class="form-data">
+        <%= f.label :username, "usename" %>
+        <%= f.text_field :username %>
+      </div>
+      <div class="action-button">
+        <%= f.submit "LOGIN", class:"submit-btn"%>
+      </div>
+    <% end %>
+  </div>
+</div>

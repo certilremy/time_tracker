@@ -1,0 +1,15 @@
+<div class="main">
+ <nav>
+<ul>
+<li><%= link_to  "About", about_path %></li>
+</ul>
+</nav>
+  <div class="data-greeting">
+    <h1>Timetracker</h1>
+    <p>Never confuse managing your time again!</p>
+  </div>
+  <div class="data-greeting-action">
+    <%= link_to  "SIGN-UP", signup_path , class:"data-btn-sign-up"%>
+    <p>Have an accout? login <%= link_to  "here", signin_path %></p>
+  </div>
+</div>

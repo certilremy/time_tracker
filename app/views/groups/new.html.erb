@@ -1,0 +1,34 @@
+<%= render  "shared/side_bar" %>
+<div class="main">
+  <div class="section-head">
+    <h1>NEW GROUP</h1>
+    <div class="action-button-cancel">
+      <%= link_to  "CANCEL", groups_path, class: "action-btn" %>
+    </div>
+  </div>
+  <%= form_for @group do |f| %>
+    <% if @group.errors.any? %>
+      <div id="error-container">
+        <div class="alert">
+          <p>Fix the errors below to create your group!</p>
+        </div>
+        <ul>
+          <% @group.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="form-data-file">
+      <%= f.label :icon, "Add an icon to this group" %>
+      <%= f.file_field :icon , class:"custom-file-input"%>
+    </div>
+    <div class="form-data">
+      <%= f.label :name, "Group name" %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="action-button">
+      <%= f.submit "ADD GROUP", class:"submit-btn"%>
+    </div>
+  <% end %>
+</div>

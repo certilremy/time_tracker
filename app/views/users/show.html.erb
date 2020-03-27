@@ -1,0 +1,16 @@
+<% if logged_in? %>
+<%= link_to  "Log out", logout_path %>
+<% end %>
+
+<h1><%=@user.username%></h1>
+
+
+<% if @user.avatar.attached? %>
+  <%= image_tag @user.avatar %>
+
+  <%else%>
+  <img src="./img/avatar.png" alt="">
+<% end %>
+<%= link_to  "New time_transaction", new_transaction_path %>
+<%= link_to  "New Group", new_group_path %>
+<%= render  "shared/side_bar" %>
