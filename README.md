@@ -88,6 +88,6 @@ $ bundle exec rspec
 ## Contribution 
 
 If you want to contribute to this project you're welcome .
-Follow the github code of conduit fork this repot and openl your pull request. 
+Follow the github code of conduite fork this repot and open your pull request. 
 
 ## Design idea by Gregoire Vella on Behance 

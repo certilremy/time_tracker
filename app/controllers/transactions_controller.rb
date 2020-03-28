@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
   before_action :require_user
 
   def index
-    @transactions = current_user.transactions.order(created_at: :desc).paginate(page: params[:page], per_page: 3)
+    @transactions = current_user.transactions.order(created_at: :desc).includes(:group).paginate(page: params[:page], per_page: 3)
   end
 
   def external
