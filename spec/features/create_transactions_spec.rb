@@ -18,6 +18,5 @@ RSpec.describe 'Process to create transaction' do
       create_transactions
       expect(page).to have_content('First transaction')
     end
-
   end
 end

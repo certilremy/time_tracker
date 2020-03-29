@@ -88,4 +88,9 @@ Shoulda::Matchers.configure do |config|
     click_button 'ADD TIME'
   end
 
+  def add_group_with(name)
+    visit new_group_path
+    fill_in 'Group name', with: name
+    click_button 'ADD GROUP'
+  end
 end
