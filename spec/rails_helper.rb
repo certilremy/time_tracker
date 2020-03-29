@@ -66,11 +66,26 @@ Shoulda::Matchers.configure do |config|
     user = create(:user)
     visit signin_path
     fill_in 'username', with: user.username
-    click_button 'Login'
+    click_button 'LOGIN'
   end
 
-  def logout 
+  def logout
     visit transactions_path
     click_link 'Log out'
   end
+
+  def create_transactions
+    visit new_transaction_path
+    fill_in 'name', with: 'First transaction'
+    fill_in 'Amount of hours spent', with: 1
+    click_button 'ADD TIME'
+  end
+
+  def create_fake_transactions
+    visit new_transaction_path
+    fill_in 'name', with: ''
+    fill_in 'Amount of hours spent', with: ''
+    click_button 'ADD TIME'
+  end
+
 end
