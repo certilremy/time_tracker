@@ -73,8 +73,9 @@ nav ul li a {
   width: 60px;
 }
 
-.name {
+.name a {
   color: #cad1df;
+  text-decoration: none;
 }
 .sidebar-menu {
   padding-top: 60px;
