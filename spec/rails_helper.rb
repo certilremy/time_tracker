@@ -51,4 +51,8 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
+
+  def login(user)
+    session[:user_id] = user.id
+  end
 end
