@@ -10,5 +10,4 @@ module SessionsHelper
   def require_user
     redirect_to root_path unless logged_in?
   end
-
 end
