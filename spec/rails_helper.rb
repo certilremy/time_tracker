@@ -55,4 +55,22 @@ Shoulda::Matchers.configure do |config|
   def login(user)
     session[:user_id] = user.id
   end
+
+  def sign_up_with(username)
+    visit signup_path
+    fill_in 'username', with: username
+    click_button 'Sign up'
+  end
+
+  def sign_in
+    user = create(:user)
+    visit signin_path
+    fill_in 'username', with: user.username
+    click_button 'Login'
+  end
+
+  def logout 
+    visit transactions_path
+    click_link 'Log out'
+  end
 end
