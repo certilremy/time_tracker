@@ -26,16 +26,20 @@ RSpec.describe TransactionsController, type: :controller do
       get :index
       expect(response).to render_template('transactions/index')
     end
-    
   end
 
   describe 'GET #show' do
-  
     it 'returns http success' do
       login(user)
       transaction = Transaction.create(name: 'Transaction to show!', amoun: 1, user_id: user.id)
-      get :show, params: { id: transaction.id}
+      get :show, params: { id: transaction.id }
       expect(response).to have_http_status(:success)
+    end
+
+    it 'Redirect to root if not logged in' do
+      transaction = Transaction.create(name: 'Transaction to show!', amoun: 1, user_id: user.id)
+      get :show, params: { id: transaction.id }
+      expect(response).to redirect_to(root_path)
     end
   end
 end
