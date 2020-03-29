@@ -1,16 +1,41 @@
-<% if logged_in? %>
-<%= link_to  "Log out", logout_path %>
-<% end %>
-
-<h1><%=@user.username%></h1>
-
-
-<% if @user.avatar.attached? %>
-  <%= image_tag @user.avatar %>
-
-  <%else%>
-  <img src="./img/avatar.png" alt="">
-<% end %>
-<%= link_to  "New time_transaction", new_transaction_path %>
-<%= link_to  "New Group", new_group_path %>
 <%= render  "shared/side_bar" %>
+<div class="main">
+  <div class="section-head">
+    <h1>Recent Times</h1>
+    <div class="action-button">
+      <%= link_to  "ADD NEW TIME", new_transaction_path, class: "action-btn" %>
+    </div>
+  </div>
+  <ul class="list-time">
+    <div class = "group-data-action">
+      <h3><%=@user.transactions.sum(:amoun)%> hours spent </h3>
+      <%= link_to 'ADD NEW GROUP', new_group_path, class: "export-btn" %>
+    </div>
+    <% if @user.transactions.count == 0 %>
+      <p>No time yet add new time</p>
+    <%else%>
+      <%@user.transactions.limit(3).includes(:group).order(created_at: :desc).each do |g|%>
+        <li>
+          <a href="/transactions/<%=g.id%>">
+            <% if g.group %>
+              <% if g.group.icon.attached? %>
+                <img class= "data-icon" src="<%=url_for(g.group.icon)%>" alt="group icon">
+              <%else%>
+                <img class= "data-icon" src="/img/group-icon.png" alt="group icon">
+              <%end%>
+            <% else %>
+              <img class= "data-icon" src="/img/na.png" alt="group icon">
+            <% end %>
+            <div class="time-content">
+              <div class= "time-detail">
+                <h3> <%= g.name%></h3>
+                <p><%=g.amoun%> hours</p>
+              </div>
+              <p id = "time">Added <%=g.created_at.strftime("%B/%d/%y")%> </p>
+            </div>
+          </a>
+        </li>
+      <%end%>
+    <% end %>
+  </ul>
+</div>

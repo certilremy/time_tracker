@@ -10,7 +10,7 @@
     <%else%>
       <img class= "profile-picture" src="/img/avatar.png" alt="">
     <% end %>
-    <h3 class="name"><%=current_user.username%></h3>
+    <h3><%= link_to  current_user.username , user_path(current_user.id) %></h3>
   </div>
   <ul class="sidebar-menu">
     <div class = "sidebar-items" >
