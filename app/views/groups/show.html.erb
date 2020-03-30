@@ -1,0 +1,38 @@
+<%= render  "shared/side_bar" %>
+<div class="main">
+  <div class="section-head">
+    <h1><%= @group.name%></h1>
+    <div class="action-button">
+      <%= link_to  "ADD NEW TIME", new_transaction_path, class: "action-btn" %>
+    </div>
+  </div>
+  <ul class="list-time">
+  <div class = "group-data-action">
+  <h3><%=@group.transactions.sum(:amoun)%> hours spent in this group</h3> <%= link_to 'Export to excel ', group_path(@group.id, format: :xlsx), class: "export-btn" %>
+  </div>
+      
+
+    <% if @group.transactions.count == 0 %>
+      <p>No time on this group yet</p>
+    <%else%>
+      <%@group.transactions.each do |g|%>
+        <li>
+          <a href="/transactions/<%=g.id%>">
+            <% if @group.icon.attached? %>
+              <img class= "data-icon" src="<%=url_for(@group.icon)%>" alt="group icon">
+            <%else%>
+              <img class= "data-icon" src="/img/group-icon.png" alt="group icon">
+            <%end%>
+            <div class="time-content">
+              <div class= "time-detail">
+                <h3> <%= g.name%></h3>
+                <p><%=g.amoun%> hours</p>
+              </div>
+              <p id = "time">Added <%=g.created_at.strftime("%B/%d/%y")%> by <%=g.user.username%></p>
+            </div>
+          </a>
+        </li>
+      <%end%>
+    <% end %>
+  </ul>
+</div>

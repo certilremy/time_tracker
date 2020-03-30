@@ -11,7 +11,7 @@ AllCops:
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 120
+  Max: 133
 Metrics/MethodLength:
   Include:
     - "app/controllers/*"
@@ -26,7 +26,7 @@ Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   ExcludedMethods: ['describe']
-  Max: 30
+  Max: 60
 
 Style/Documentation:
   Enabled: false
@@ -38,8 +38,12 @@ Style/AndOr:
   Enabled: false
 Style/DefWithParentheses:
   Enabled: false
+Style/GuardClause:
+  Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+Style/IfUnlessModifier:
+  Enabled: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: key

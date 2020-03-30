@@ -1,0 +1,30 @@
+<div class="main">
+  <div class="data-sign-up">
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error-container">
+          <div class="alert">
+            <p>Fix the errors below to create your acount!</p>
+          </div>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="form-data-file">
+        <h1>Sign-up</h1>
+        <%= f.label :avatar, "Add a profile picture" %>
+        <%= f.file_field :avatar %>
+      </div>
+      <div class="form-data">
+        <%= f.label :username, "username" %>
+        <%= f.text_field :username %>
+      </div>
+      <div class="action-button">
+        <%= f.submit "Sign up", class:"submit-btn"%>
+      </div>
+    <% end %>
+  </div>
+</div>

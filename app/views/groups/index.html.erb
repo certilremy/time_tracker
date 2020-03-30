@@ -1,0 +1,28 @@
+<%= render  "shared/side_bar" %>
+<div class="main">
+  <div class="section-head">
+    <h1>ALL GROUPS</h1>
+    <div class="action-button">
+      <%= link_to  "ADD NEW GROUP", new_group_path, class: "action-btn" %>
+    </div>
+  </div>
+  <ul class="list-group">
+    <%@groups.each do |g|%>
+      <li>
+        <a href="/groups/<%=g.id%>">
+          <% if g.icon.attached? %>
+            <img class= "data-icon" src="<%=url_for(g.icon)%>" alt="group icon">
+          <%else%>
+            <img class= "data-icon" src="./img/group-icon.png" alt="group icon">
+          <% end %>
+          <div class="group-content">
+            <h3><%=g.name%></h3>
+            <p>Added <%=g.created_at.strftime("%B/%d/%y")%></p>
+          </div>
+        </a>
+      </li>
+    <%end%>
+    <%= will_paginate @groups %>
+  </div>
+</ul>
+</div>
